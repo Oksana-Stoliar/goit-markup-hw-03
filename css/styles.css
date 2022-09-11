@@ -91,7 +91,8 @@ adress {
 
 /*Header Site nav*/
 .page-header {
-  background-color: #ccc;
+  /*background-color: #ccc;*/
+  border-bottom: 1px solid #ECECEC;
 }
 
 .site-nav .link {
@@ -320,16 +321,12 @@ adress {
 /*Footer*/
 .footer {
   background-color: var(--secondary-background-color);
-}
-
-.logo-footer {
-padding-top: 60px;
-padding-bottom: 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .contact {
   margin-top: 20px;
-  padding-bottom: 60px;
   margin-left: 215px;
   }
 
