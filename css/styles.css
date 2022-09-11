@@ -322,12 +322,14 @@ adress {
 .logo-footer {
 padding-top: 60px;
 padding-bottom: 20px;
+margin-left: 215px;
 }
 
 .contact {
   margin-top: 20px;
   padding-bottom: 60px;
-}
+  margin-left: 215px;
+  }
 
 .contact .adres {
   color: var(--text-color);
