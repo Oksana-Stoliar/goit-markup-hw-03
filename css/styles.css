@@ -16,6 +16,7 @@
   --background-color: #f5f4fa;
   --primary-background-color: #ffffff;
   --secondary-background-color: #2f303a;
+  --border-color: #eeeeee;
 }
 
 html {
@@ -70,7 +71,7 @@ adress {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  margin-left: 215px;
+  /*margin-left: 215px;*/
 }
 
 .accent {
@@ -89,20 +90,54 @@ adress {
   line-height: 1.2;
 }
 
-/*Header Site nav*/
+/*Header*/
 .page-header {
   /*background-color: #ccc;*/
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Site nav*/
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav .item {
+  margin-right: 50px;
+}
+
+/*Auth-nav*/
+.auth-nav-li {
+  display: flex;
+}
+
+.auth-nav .item + .item {
+  margin-left: 50px;
+}
+
+.site-nav .item:last-child {
+  margin-right: 0px;
 }
 
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--primary-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .site-nav .link:hover,
@@ -110,18 +145,25 @@ adress {
   color: var(--accent-color);
 }
 
-/*составной селектор- фиксатор цвета ссылки*/
 .site-nav .link.current {
   color: var(--accent-color);
 }
 
 /*Mail+tel*/
+.auth-nav {
+  margin-left: auto;
+}
+
+.auth-nav .item + .item {
+  margin-left: 50px;
+}
+
 .auth-nav .link {
   color: var(--secondary-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  }
+}
 
 .auth-nav .link:hover,
 .auth-nav .link:focus {
@@ -137,6 +179,9 @@ adress {
 }
 
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-top: 200px;
   color: var(--text-color);
   font-weight: 900;
   font-size: 44px;
@@ -144,9 +189,6 @@ adress {
   /*text-align: center;*/
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  margin-top: 0;
-  margin-bottom: 30px;
-  padding-top: 200px;
 }
 
 /*Buttons*/
@@ -164,7 +206,7 @@ adress {
   padding: 10px 32px;
   min-width: 216px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  }
+}
 
 .button.primary {
   color: var(--primary-background-color);
@@ -192,6 +234,10 @@ adress {
   padding: 6px 22px;
 }
 
+.button:active {
+  background-color: #188CE8;
+}
+
 .button.primary:hover,
 .button.primary:focus {
   color: var(--primary-text-color);
@@ -210,9 +256,24 @@ adress {
   margin-bottom: 94px;
 }
 
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.section .item {
+  margin-right: 30px;
+  outline: 1px solid tomato;
+}
+
+.section .item:last-child {
+  margin-right: 0px;
+}
+
 .section .title {
   margin-top: 0;
   margin-bottom: 10px;
+
   color: var(--primary-text-color);
   font-weight: 700;
   line-height: 1.14;
@@ -233,9 +294,15 @@ adress {
   margin-bottom: 94px;
 }
 
+.image-list {
+  display: flex;
+  justify-content: space-between;
+}
+
 .section-title {
   margin-top: 0;
   margin-bottom: 50px;
+
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -247,18 +314,27 @@ adress {
 .team {
   margin-top: 0;
   margin-bottom: 0;
+
   background-color: var(--background-color);
 }
 
+.team-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 94px;
+}
+
 .team-li {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-title {
   margin-top: 0;
   margin-bottom: 50px;
   padding-top: 94px;
+
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -269,6 +345,7 @@ adress {
 .team-list .title {
   margin-top: 30px;
   margin-bottom: 0px;
+
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -279,12 +356,27 @@ adress {
 .team-list .post {
   margin-top: 10px;
   margin-bottom: 0;
+
   color: var(--secondary-text-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
   padding-bottom: 30px;
+}
+
+/*Кнопки nav для Portfolio*/
+.work-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.work-nav .item {
+  margin-right: 8px;
+}
+
+.work-nav .item:last-child {
+  margin-right: 0px;
 }
 
 /*Portfolio*/
@@ -294,41 +386,61 @@ adress {
 }
 
 .work-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
   margin-top: 34px;
 }
 
+.work-li {
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.work-list .item {
+  padding: 20px 24px;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
 .work-list .title {
-  margin-top: 20px;
   margin-bottom: 4px;
+
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  text-align: center;
 }
 
 .work-list .post {
   margin-top: 0;
   margin-bottom: 0;
+
   color: var(--secondary-text-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
-  text-align: center;
 }
 
 /*Footer*/
 .footer {
-  background-color: var(--secondary-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: var(--secondary-background-color);
 }
 
 .contact {
   margin-top: 20px;
-  margin-left: 215px;
-  }
+}
+
+.contact .item {
+  margin-bottom: 9px;
+}
+
+.contact .item:last-child {
+  margin-bottom: 0px;
+}
 
 .contact .adres {
   color: var(--text-color);
@@ -346,10 +458,10 @@ adress {
 
 /*Розмітка сторінки*/
 .container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
   outline: 2px solid tomato;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
