@@ -71,7 +71,8 @@ adress {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  }
+  /*margin-left: 215px;*/
+}
 
 .accent {
   color: var(--primary-text-color);
@@ -92,7 +93,7 @@ adress {
 /*Header*/
 .page-header {
   /*background-color: #ccc;*/
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid #ECECEC;
 }
 
 .header-nav {
@@ -116,23 +117,27 @@ adress {
   margin-right: 50px;
 }
 
-/*Auth-nav*/
-.auth-nav-li {
-  display: flex;
-}
-
-.auth-nav .item + .item {
-  margin-left: 50px;
-}
-
+/*Очистити правий margin*/
+/*Примінити тільки для останнього*/
 .site-nav .item:last-child {
   margin-right: 0px;
 }
+
+/*Не приміняти до останнього елемента списку 
+    .site-nav .item:not(:last-child) {
+        margin-right: 50px;
+    }
+     Примінити до всіх крім першого
+    .site-nav .item + .item {
+        margin-left: 50px;
+    }
+    */
 
 .site-nav .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  /*outline: 1px solid tomato;*/
   color: var(--primary-text-color);
   font-weight: 500;
   line-height: 1.14;
@@ -144,16 +149,22 @@ adress {
   color: var(--accent-color);
 }
 
+/*составной селектор- фиксатор цвета ссылки*/
 .site-nav .link.current {
   color: var(--accent-color);
 }
 
 /*Mail+tel*/
+/*Auth-nav*/
 .auth-nav {
   margin-left: auto;
 }
 
-.auth-nav .item + .item {
+.auth-nav-li {
+  display: flex;
+}
+
+.auth-nav .item+.item {
   margin-left: 50px;
 }
 
@@ -173,38 +184,42 @@ adress {
 .hero {
   background-color: var(--secondary-background-color);
   text-align: center;
-  margin-bottom: 94px; 
-  min-height: 600px;
-  }
+  margin-bottom: 94px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
 
 .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
-  padding-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 696px;
+
   color: var(--text-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
+  /*text-align: center;*/
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
 /*Buttons*/
 .button {
+
   color: var(--primary-background-color);
   background-color: var(--accent-color);
   border-color: transparent;
   font-family: 'Roboto';
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.9;
-  font-family: inherit;
+  line-height: 1.875;
   text-align: center;
   letter-spacing: 0.06em;
   border-radius: 4px;
   padding: 10px 32px;
   min-width: 216px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .button.primary {
@@ -251,24 +266,24 @@ adress {
 
 /*Specifics*/
 .specifics {
-  margin-top: 0;
-  margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.section {
+.feature {
   display: flex;
   justify-content: center;
 }
 
-.section .item {
+.feature .item {
   margin-right: 30px;
-  }
+}
 
-.section .item:last-child {
+.feature .item:last-child {
   margin-right: 0px;
 }
 
-.section .title {
+.feature .title {
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -278,27 +293,27 @@ adress {
   text-transform: uppercase;
 }
 
-.section .post {
+.feature .post {
   margin-top: 0;
   margin-bottom: 0;
+
   color: var(--secondary-text-color);
   font-weight: 400;
   line-height: 1.71;
 }
 
 /*What do we do*/
-.image {
-  margin-top: 0;
+.main-box {
   margin-bottom: 94px;
+  padding-top: 0;
 }
 
-.image-list {
+.box-list {
   display: flex;
   justify-content: space-between;
 }
 
 .section-title {
-  margin-top: 0;
   margin-bottom: 50px;
 
   color: var(--primary-text-color);
@@ -306,6 +321,12 @@ adress {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /*Our team*/
@@ -316,15 +337,15 @@ adress {
   background-color: var(--background-color);
 }
 
-.team-list {
+.team-card {
   display: flex;
   justify-content: space-between;
   margin-bottom: 94px;
 }
 
-.team-li {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+.team-card .item {
+  background-color: var(--primary-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -340,7 +361,7 @@ adress {
   text-align: center;
 }
 
-.team-list .title {
+.team-card .title {
   margin-top: 30px;
   margin-bottom: 0px;
 
@@ -351,57 +372,57 @@ adress {
   text-align: center;
 }
 
-.team-list .post {
+.team-card .post {
   margin-top: 10px;
-  margin-bottom: 0;
+  margin-bottom: 30px;
 
   color: var(--secondary-text-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
-  padding-bottom: 30px;
+
 }
 
 /*Кнопки nav для Portfolio*/
-.work-nav {
+.filter {
   display: flex;
   justify-content: center;
 }
 
-.work-nav .item {
+.filter .item {
   margin-right: 8px;
 }
 
-.work-nav .item:last-child {
+.filter .item:last-child {
   margin-right: 0px;
 }
 
 /*Portfolio*/
 .portfolio {
-  margin-top: 94px;
-  margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.work-list {
+.project {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 34px;
+  margin-top: 50px;
 }
 
-.work-li {
+.project-li {
   flex-basis: calc((100% - 60px) / 3);
 }
 
-.work-list .item {
+.project .item {
   padding: 20px 24px;
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
 
-.work-list .title {
+.project .title {
   margin-bottom: 4px;
 
   color: var(--primary-text-color);
@@ -411,7 +432,7 @@ adress {
   letter-spacing: 0.06em;
 }
 
-.work-list .post {
+.project .post {
   margin-top: 0;
   margin-bottom: 0;
 
@@ -458,7 +479,7 @@ adress {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+  width: 1200px;
 }
