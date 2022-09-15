@@ -93,7 +93,7 @@ adress {
 /*Header*/
 .page-header {
   /*background-color: #ccc;*/
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
 }
 
 .header-nav {
@@ -117,21 +117,9 @@ adress {
   margin-right: 50px;
 }
 
-/*Очистити правий margin*/
-/*Примінити тільки для останнього*/
 .site-nav .item:last-child {
   margin-right: 0px;
 }
-
-/*Не приміняти до останнього елемента списку 
-    .site-nav .item:not(:last-child) {
-        margin-right: 50px;
-    }
-     Примінити до всіх крім першого
-    .site-nav .item + .item {
-        margin-left: 50px;
-    }
-    */
 
 .site-nav .link {
   display: block;
@@ -164,7 +152,7 @@ adress {
   display: flex;
 }
 
-.auth-nav .item+.item {
+.auth-nav .item + .item {
   margin-left: 50px;
 }
 
@@ -184,7 +172,6 @@ adress {
 .hero {
   background-color: var(--secondary-background-color);
   text-align: center;
-  margin-bottom: 94px;
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -207,7 +194,6 @@ adress {
 
 /*Buttons*/
 .button {
-
   color: var(--primary-background-color);
   background-color: var(--accent-color);
   border-color: transparent;
@@ -249,7 +235,7 @@ adress {
 }
 
 .button:active {
-  background-color: #188CE8;
+  background-color: #188ce8;
 }
 
 .button.primary:hover,
@@ -262,6 +248,11 @@ adress {
 .button.secondary:focus {
   color: var(--primary-background-color);
   background-color: var(--accent-color);
+}
+
+.general {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /*Specifics*/
@@ -286,7 +277,7 @@ adress {
 .feature .title {
   margin-top: 0;
   margin-bottom: 10px;
-
+  font-size: 14px;
   color: var(--primary-text-color);
   font-weight: 700;
   line-height: 1.14;
@@ -296,7 +287,6 @@ adress {
 .feature .post {
   margin-top: 0;
   margin-bottom: 0;
-
   color: var(--secondary-text-color);
   font-weight: 400;
   line-height: 1.71;
@@ -333,27 +323,24 @@ adress {
 .team {
   margin-top: 0;
   margin-bottom: 0;
-
   background-color: var(--background-color);
 }
 
 .team-card {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 94px;
 }
 
 .team-card .item {
   background-color: var(--primary-background-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
 .team-title {
   margin-top: 0;
   margin-bottom: 50px;
-  padding-top: 94px;
-
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -381,7 +368,6 @@ adress {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
-
 }
 
 /*Кнопки nav для Portfolio*/
